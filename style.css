@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Dosis&family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--orange);
+  font-family: "Croissant One", serif;
+  font-family: "Dosis", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+:root {
+  --orange: #f2c14e;
+  --winning-blocks: #37505c;
+  background-color: var(--winning-blocks);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.game > h1 {
+  font: 24px;
+}
+
+.game > .btn > button,
+.details > .btn > button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: var(--orange);
+  background-color: var(--orange);
+  color: #333;
+  font-size: 18px;
+  transition: transform 200ms;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.game > .gameboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.game > .gameboard > .box {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #f2c14e;
+  font-size: 60px;
+  font-family: "Finger Paint", cursive;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  width: 300px;
+  margin-top: 100px;
+}
+
+.details > .name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.details > .name > label {
+  margin: 10px;
+}
+
+.details > .name > input {
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--winning-blocks);
+}
+
+.details > .btn > button {
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  width: 400px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.result > div > h4 {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .game {
+    width: 300px;
+  }
+
+  .game > h1 {
+    font: 18px;
+  }
+
+  .game > .gameboard {
+    width: 240px;
+  }
+
+  .game > .gameboard > .box {
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+  }
+
+  .details {
+    width: 200px;
+  }
+
+  .details > .name > label {
+    margin: 10px;
+  }
+
+  .details > .name > input {
+    height: 40px;
+    width: 180px;
+  }
+
+  .details > .btn > button {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .result {
+    font-size: 18px;
+    width: 300px;
+  }
+}
